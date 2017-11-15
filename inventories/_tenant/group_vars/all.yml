@@ -1,0 +1,14 @@
+---
+
+# This file is used to declare client variables
+tenant_name: tenant
+
+# Key Value style
+key: value
+
+# Three Value style
+complex:
+  key1: key1_value
+  key2:
+    key2_1: key2_1_value
+    key2_2: key2_2_value

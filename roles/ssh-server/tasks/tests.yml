@@ -1,0 +1,6 @@
+---
+
+- name: Tests | Wait for sshd
+  wait_for:
+      port: 22
+      delay: 3

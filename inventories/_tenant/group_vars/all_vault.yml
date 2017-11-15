@@ -1,0 +1,6 @@
+---
+
+# The vault file is used to declare all sensitive values like password
+
+# User
+vault_user_password: user_password_value

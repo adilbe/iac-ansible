@@ -1,0 +1,13 @@
+---
+
+# Use import_task on static include
+# Use include_tasks on dynamic ones
+
+- import_tasks: install.yml
+  tags: install-ssh-server
+
+- import_tasks: configure.yml
+  tags: configure-ssh-server
+
+- import_tasks: tests.yml
+  tags: smoke-test, smoke-test-ssh-server

@@ -1,0 +1,15 @@
+---
+
+# Disable clear password
+# if the configuration change, restart sshd using a handler
+# otherwise, nothing
+# This is the aim of handlers
+
+- name: Configure | Disable tunneled clear text passwords
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '^PasswordAuthentication.*$'
+    replace: 'PasswordAuthentication no'
+    backup: yes
+  notify: Restart SSHD
+

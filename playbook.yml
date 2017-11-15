@@ -1,0 +1,27 @@
+---
+
+# In detail, this play will
+## In parallel
+## Gather fact all mapr-node
+## And ping them using the ping module
+## For a complete list of ansible module, http://docs.ansible.com/ansible/latest/modules_by_category.html
+## To see verbose execution, use -v when running the ansible playbook
+- hosts: mapr-node
+  tasks:
+    - name: Ping all machines
+      ping:
+
+# In detail, run common role
+## In parallel
+- hosts: mapr-node
+  roles:
+    - { role: common }
+
+# In detail, run service installer role
+## Rolling upgrade
+## Install one node, if succeed, run the second and ...
+## If not, the playbook will fail
+- hosts: mapr-node
+  serial: 1
+  roles:
+    - { role: ssh-server }

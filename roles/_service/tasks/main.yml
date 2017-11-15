@@ -1,0 +1,16 @@
+---
+
+# Use import_task on static include
+# Use include_tasks on dynamic ones
+
+- import_tasks: checks-prerequisites.yml
+  tags: validate-before-install-service
+
+- import_tasks: install.yml
+  tags: install-service
+
+- import_tasks: configure.yml
+  tags: configure-service
+
+- import_tasks: tests.yml
+  tags: validate-install-configure-service

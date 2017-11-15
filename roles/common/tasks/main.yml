@@ -1,0 +1,10 @@
+---
+
+# Install vim, wget and java on targeted machines
+- name: Install core packages
+  package: name={{ item }} state=present
+  with_items:
+    - vim
+    - wget
+    - java
+  tags: common

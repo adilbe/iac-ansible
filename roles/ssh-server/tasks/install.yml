@@ -1,0 +1,12 @@
+---
+
+# Loop install of openssh packages
+
+- name: Install ssh packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - openssh
+    - openssh-clients
+    - openssh-server
