@@ -65,7 +65,7 @@ For more readiness, it's a good practice to change default identity in your publ
 ```bash
 $ cat mapr.pub
 
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQXXXXXXXXXX ${your_email.address}@ca-silca.fr
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQXXXXXXXXXX ${your_email.address}@domain.fr
 
 ```
 
@@ -77,6 +77,7 @@ cat ${USER_HOME}/.ssh/authrized_keys
 
 ### SSH Agent
 ```bash
+to complete
 ```
 
 
