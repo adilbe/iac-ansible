@@ -22,12 +22,13 @@ Idempotence means that, with the same inputs:
 The play book must achieve the targeted results
 
 ## Use handlers
-When configuring service, to achieve best performance, avoid restarting services even if the configurantion is not changed. 
+When configuring service, to achieve best performance, avoid restarting services even if the configuration is not changed. 
 An example is given sith the ssh-server ansible role. 
 
 ## Only one
 One playbook for all clients
 One role for all clients
+One playbook per ecosystem
 
 # Prepare your environement
 ## SSH
@@ -77,7 +78,19 @@ cat ${USER_HOME}/.ssh/authrized_keys
 
 ### SSH Agent
 ```bash
-to complete
+ssh-agent
+# Execute the ssh-agent output commands
+
+# Check the agent
+ssh-add -l
+
+# Add your key in the Agent
+chmod 400 ${USER_HOME}/.ssh/mapr.pub
+ssh-add ${USER_HOME}/.ssh/mapr.pub
+
+# Check the agent
+ssh-add -l
+
 ```
 
 
